@@ -1,0 +1,66 @@
+/* HeroDetailComponent's private CSS styles */
+label {
+  color: #435960;
+  font-weight: bold;
+}
+input {
+  font-size: 1em;
+  padding: .5rem;
+}
+button {
+  margin-top: 20px;
+  margin-right: .5rem;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+.error{
+  color: red;
+}
+
+.has-error{
+  border: 1px solid red;
+}
+
+.display-n{
+  display: none;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border: 5px solid #42A948;
+}
+
+.ng-invalid:not(form)  {
+  border: 5px solid #a94442;
+}
+
+.alert div {
+  background-color: #fed3d3;
+  color: #820000;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+select {
+  width: 100%;
+  padding: .5rem;
+}

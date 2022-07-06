@@ -1,0 +1,6 @@
+<div>
+    <select class="custom-select" (change)="changeLang($any($event.target).value)">
+        <option value="en-US" [selected]="lang == 'en-US'">English</option>
+        <option value="es-ES" [selected]="lang == 'es-ES'">español</option>
+    </select>
+</div>

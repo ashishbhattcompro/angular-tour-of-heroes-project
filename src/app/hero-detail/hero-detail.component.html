@@ -1,0 +1,25 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <form [formGroup]="myForm">
+    <ng-container formArrayName="allheroes">
+        <div class="mb-3" *ngFor="let heroes of allheroes.controls; let i=index;">
+            <label for="heroName" class="form-label">Hero name: </label>
+            <input id="heroName" type="heroes" (input)="onInput()" [(ngModel)]="hero.name" class="form-control" placeholder="Hero name" [formControlName]="i" ng-minlength="4" required aria-label="enter hero name">
+            <small *ngIf="name != null && name.invalid && hero.name.length >= 4 && (name.dirty || name.touched)"
+            class="alert alert-danger" class="error">Please Enter the Name</small>
+            <div *ngIf="heroes.errors" class="error">
+              Name is required.
+            </div>
+            <div *ngIf="heroes.errors?.['minlength']">
+              Name must be at least 4 characters long.
+            </div>
+        </div>
+    </ng-container>
+    <div>
+      <div i18n><span>Salary: </span>{{hero.salary | currency:currrencyCode}}</div>
+    </div>
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()" [disabled]="btnState">save</button>
+  </form>
+</div>
